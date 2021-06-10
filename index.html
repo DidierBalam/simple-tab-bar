@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="tab">
+        <!-- Header -->
+        <div class="tab-header">
+            <button id="vue-tab-option" class="isActive" onclick="setTab(0)">
+                <p>Vue js</p>
+                <div></div>
+            </button>
+            <button id="react-tab-option" onclick="setTab(1)">
+                <p>React js</p>
+                <div></div>
+            </button>
+            <button id="angular-tab-option" onclick="setTab(2)">
+                <p>Angular</p>
+                <div></div>
+            </button>
+            <button id="other-tab-option" onclick="setTab(3)">
+                <p>Other</p>
+                <div></div>
+            </button>
+        </div>
+        <!-- //Header -->
+
+        <!-- Body -->
+        <div class="tab-body">
+            <section id="vue-tab-body" class="isActive">
+                <h1>Vue js Team :D</h1>
+            </section>
+            <section id="react-tab-body">
+                <h1>React js Team :)</h1>
+            </section>
+            <section id="angular-tab-body">
+                <h1>Angular Team :|</h1>
+            </section>
+            <section id="other-tab-body">
+                <h1>Other Team :(</h1>
+            </section>
+        </div>
+        <!-- //Body -->
+    </div>
+
+    <!-- logic -->
+    <script src="./tab.js"></script>
+</body>
+
+</html>

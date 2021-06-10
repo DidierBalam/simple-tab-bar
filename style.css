@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+    background: linear-gradient( 269deg, #8e35f9 0%, #be85ff 100%);
+}
+
+body, button, p {
+    font-family: poppins, sans-serif;
+}
+
+/*********
+Tab Styles 
+*********/
+
+.tab {
+    width: 50%;
+    background: white;
+    padding: 2em;
+    border-radius: .3em;
+    box-shadow: 0px 15px 20px 0px hsla(0, 0%, 0%, 0.118);
+}
+
+/* header */
+
+.tab .tab-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab .tab-header button {
+    position: relative;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    color: #8d8d8d;
+    background-color: transparent;
+    border: none;
+}
+
+.tab .tab-header button:active {
+    background-color: rgb(243, 243, 243);
+    transform: scale(0.9);
+    transition: all 0.15s;
+}
+
+.tab .tab-header button p {
+    margin: .5em;
+}
+
+.tab .tab-header button.isActive p {
+    color: #8e35f9;
+    font-weight: 700;
+}
+
+.tab .tab-header button.isActive div {
+    position: absolute;
+    bottom: 0;
+    height: .2em;
+    width: 100%;
+    border-radius: 1em;
+    background-color: #8e35f9;
+}
+
+.tab .tab-header button.isActive.left div {
+    animation: left_tab_options_transition 1s;
+}
+
+.tab .tab-header button.isActive.right div {
+    animation: right_tab_options_transition 1s;
+}
+
+/*Body  */
+
+.tab .tab-body {
+    display: flex;
+    justify-content: center;
+}
+
+.tab .tab-body section {
+    display: none;
+    padding: 3em;
+    padding-bottom: 4em;
+    color: #a55bfc;
+    font-size: 2em;
+}
+
+.tab .tab-body section.isActive {
+    display: inline;
+    animation: tab_body_transition 1s;
+}
+
+/* transitions */
+
+@keyframes left_tab_options_transition {
+    0% {
+        opacity: 0;
+        backface-visibility: hidden;
+        transform: translate(-3em, 0) translateZ(0);
+    }
+    50% {
+        opacity: 1;
+        backface-visibility: hidden;
+        transform: translate(0, 0) translateZ(0);
+    }
+}
+
+@keyframes right_tab_options_transition {
+    0% {
+        opacity: 0;
+        backface-visibility: hidden;
+        transform: translate(3em, 0) translateZ(0);
+    }
+    50% {
+        opacity: 1;
+        backface-visibility: hidden;
+        transform: translate(0, 0) translateZ(0);
+    }
+}
+
+@keyframes tab_body_transition {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
